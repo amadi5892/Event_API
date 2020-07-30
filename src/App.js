@@ -22,7 +22,7 @@ class App extends React.Component {
   render() {
 
     const searchValue = (event) => {
-
+      console.log('searched', event.target.value)
     }
 
     return (
