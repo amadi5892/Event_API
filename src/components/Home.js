@@ -9,6 +9,7 @@ class Home extends React.Component {
         this.state = {
             info: [],
             info2: [],
+            inputValue: '',
         }
     }
 
