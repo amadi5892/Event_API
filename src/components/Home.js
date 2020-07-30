@@ -28,6 +28,8 @@ class Home extends React.Component {
 componentDidMount() {
     this.getAnswer();
 }
+
+
     
     render() {
         return (
