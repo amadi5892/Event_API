@@ -16,15 +16,25 @@ class App extends React.Component {
 
     this.state = {
       inputValue: '',
+      serchSubmission: false,
     }
+  }
+
+  searchValue = (event) => {
+    event.preventDefault()
+    console.log('searched', event.target.value)
+    this.setState({inputValue: event.target.value})
+  }
+
+  handleFormSubmission = (event) => {
+    event.preventDefault()
+    this.setState({searchSubmission: true})
+    console.log('form submitted')
   }
   
   render() {
 
-    const searchValue = (event) => {
-      console.log('searched', event.target.value)
-      this.setState({inputValue: event.target.value})
-    }
+  
 
     return (
       <div className="App">
@@ -60,8 +70,8 @@ class App extends React.Component {
                   </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={searchValue}></input>
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={this.searchValue} value={this.state.inputValue}></input>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onChange={this.handleFormSubmission} >Search</button>
                 </form>
               </div>
             </nav>
