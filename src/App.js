@@ -23,6 +23,7 @@ class App extends React.Component {
 
     const searchValue = (event) => {
       console.log('searched', event.target.value)
+      this.setState({inputValue: event.target.value})
     }
 
     return (
