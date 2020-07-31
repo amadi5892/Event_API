@@ -12,7 +12,6 @@ function PlayerCard(props) {
             <p> DOB: {/* DOB */} </p>
             <p> Status: {/* Signing */} </p>
             <p> Bio: {/* Description */} </p>
-            <p></p>
         </div>
     )
 }

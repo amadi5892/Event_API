@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import Home from './components/Home';
+import Countrys from './components/Countrys';
 
 
 
@@ -16,7 +17,7 @@ class App extends React.Component {
 
     this.state = {
       inputValue: '',
-      serchSubmission: false,
+      searchSubmission: false,
     }
   }
 
@@ -52,7 +53,7 @@ class App extends React.Component {
                     <Link to="/" className="nav-link">Home</Link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                  <Link to="/country" className="nav-link">Country</Link>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -81,8 +82,8 @@ class App extends React.Component {
             <Route path="/">
               <Home />
               </Route>
-            <Route path="/books">
-              {/* <Book /> */}
+            <Route path="/country">
+              <Countrys />
               </Route>
             <Route path="/wines">
               {/* <Wine /> */}
