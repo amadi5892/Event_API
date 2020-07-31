@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import PlayerCard from './PlayerCard'
+import CountryCard from './CountryCard'
 
 
 class Home extends React.Component {
@@ -40,11 +40,21 @@ handleChange(e) {
         return (
             <div>
                 <form>
-                    <input type="text" placeholder="Search" onChange={handleChange}></input> 
-                    <button type="submit" onClick={handleSubmission}>Submit</button>
+                    <input type="text" placeholder="Search" onChange={this.handleChange}></input> 
+                    <button type="submit" onClick={this.handleSubmission}>Submit</button>
                 </form>
                 {this.state.info2.strSport}
-
+                {this.state.info.map( (place) => {
+                    return (
+                        <CountryCard 
+                        name={place.strSport}
+                        league={place.strLeague}
+                        leagueFullName={place.strLeagueAlternate}
+                        country={place.strCountry}
+                        description={place.strDescriptionEN}
+                        />
+                    )
+                })}
             </div>
         )
     }
