@@ -10,6 +10,7 @@ class Countrys extends React.Component {
         this.state = {
             info: [],
             country: '',
+            info2: [],
         }
     }
 
@@ -17,20 +18,22 @@ class Countrys extends React.Component {
         try {
         const response = await axios.get(`https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?c=${this.state.country}`)
         console.log(response.data)
-        this.setState({info: response.data.countrys}); 
-        
+        this.setState({info: response.data.countrys});
+        console.log(this.state.info[0].strSport)
+        this.setState({info2: this.state.info});
 
     } catch {
 
     }
 }
 
-handleSubmission(e) {
+
+handleSubmission = (e) => {
     e.preventDefault()
     this.getAnswer()
 }
 
-handleChange(e) {
+handleChange = (e) => {
     this.setState({country: e.target.value})
 }
 
@@ -38,13 +41,12 @@ handleChange(e) {
     render() {
         return (
             <div>
-                <h1>HEllo OWWorld</h1>
-                {/* <form>
+                <form>
                     <input type="text" placeholder="Search" onChange={this.handleChange}></input> 
                     <button type="submit" onClick={this.handleSubmission}>Submit</button>
-                </form> */}
-                {/* {this.state.info2.strSport} */}
-                {/* {this.state.info.map( (place) => {
+                </form>
+                {() => {return (this.state.info[0].strSport)}}
+                {this.state.info.map( (place) => {
                     return (
                         <CountryCard 
                         name={place.strSport}
@@ -54,7 +56,7 @@ handleChange(e) {
                         description={place.strDescriptionEN}
                         />
                     )
-                })} */}
+                })}
             </div>
         )
     }

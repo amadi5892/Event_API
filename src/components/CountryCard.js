@@ -3,12 +3,15 @@ import React from 'react'
 function CountryCard(props) {
     return (
         <div>
-            <h1>Sport: {props.name} </h1>
-            <h3>League: {props.league} </h3>
-            <p>League Full Name: {props.leagueFullName} </p>
-            <p>Country: {props.country} </p>
-            <p>Bio: {props.description} </p>
+            <div className="card-info">
+                <h1>Sport: {props.name} </h1>
+                <h3>League: {props.league} </h3>
+                <p><strong>League Full Name:</strong> {props.leagueFullName} </p>
+                <p><strong>Country:</strong> {props.country} </p>
+                <p><strong>Bio:</strong> {props.description} </p>
+            </div>
         </div>
+        
     )
 }
 
