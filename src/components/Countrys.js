@@ -3,13 +3,12 @@ import axios from 'axios'
 import CountryCard from './CountryCard'
 
 
-class Home extends React.Component {
-    constructor(props) {
-        super(props);
+class Countrys extends React.Component {
+    constructor() {
+        super();
 
         this.state = {
             info: [],
-            info2: [],
             country: '',
         }
     }
@@ -39,12 +38,13 @@ handleChange(e) {
     render() {
         return (
             <div>
-                <form>
+                <h1>HEllo OWWorld</h1>
+                {/* <form>
                     <input type="text" placeholder="Search" onChange={this.handleChange}></input> 
                     <button type="submit" onClick={this.handleSubmission}>Submit</button>
-                </form>
-                {this.state.info2.strSport}
-                {this.state.info.map( (place) => {
+                </form> */}
+                {/* {this.state.info2.strSport} */}
+                {/* {this.state.info.map( (place) => {
                     return (
                         <CountryCard 
                         name={place.strSport}
@@ -54,10 +54,10 @@ handleChange(e) {
                         description={place.strDescriptionEN}
                         />
                     )
-                })}
+                })} */}
             </div>
         )
     }
 }
 
-export default Home
+export default Countrys
