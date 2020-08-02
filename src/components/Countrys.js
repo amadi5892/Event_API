@@ -40,7 +40,7 @@ handleChange = (e) => {
     
     render() {
         return (
-            <div>
+            <div className="bgd-country">
                 <form>
                     <input type="text" placeholder="Search" onChange={this.handleChange}></input> 
                     <button type="submit" onClick={this.handleSubmission}>Submit</button>
@@ -57,6 +57,7 @@ handleChange = (e) => {
                         />
                     )
                 })}
+                
             </div>
         )
     }
