@@ -17,9 +17,9 @@ class Countrys extends React.Component {
     async getAnswer () {
         try {
         const response = await axios.get(`https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?c=${this.state.country}`)
-        console.log(response.data)
+        // console.log(response.data)
         this.setState({info: response.data.countrys});
-        console.log(this.state.info[0].strSport)
+        // console.log(this.state.info[0].strSport)
         this.setState({info2: this.state.info});
 
     } catch {
