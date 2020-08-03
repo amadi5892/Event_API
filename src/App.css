@@ -45,11 +45,15 @@ li {
   text-align: center;
   background-color: #cfdbd5;
   width: 800px;
-  height: 800px;
+  height: 900px;
   margin: 0 auto;
   opacity: .75;
 }
 
 .vid {
+  margin-top: 20px;
+}
+
+.ply-week {
   margin-top: 20px;
 }
