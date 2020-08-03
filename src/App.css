@@ -34,6 +34,8 @@ li {
 }
 
 .hme-ttl {
-  color: white;
-  font-size: 50pt;
+  color: gray;
+  text-align: center;
+  font-size: 100pt;
+  text-shadow: 2px 2px #b9e769;
 }
