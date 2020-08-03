@@ -39,3 +39,13 @@ li {
   font-size: 100pt;
   text-shadow: 2px 2px #b9e769;
 }
+
+.txt-box {
+  border: solid yellow;
+  text-align: center;
+  background-color: #cfdbd5;
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  opacity: .75;
+}
