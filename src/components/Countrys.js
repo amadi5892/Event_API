@@ -41,9 +41,9 @@ handleChange = (e) => {
     render() {
         return (
             <div className="bgd-country">
-                <form>
+                <form className="form">
                     <input type="text" placeholder="Search" onChange={this.handleChange}></input> 
-                    <button type="submit" onClick={this.handleSubmission}>Submit</button>
+                    <button  type="submit" onClick={this.handleSubmission}>Submit</button>
                 </form>
                 {() => {return (this.state.info[0].strSport)}}
                 {this.state.info.map( (place) => {
