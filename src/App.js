@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home'
 import Countrys from './components/Countrys'
+import Player from './components/Player'
 import './App.css'
 
 
@@ -29,7 +30,7 @@ function App() {
                   <Link  to="/country">Country</Link>
                 </li>
                 <li>
-                  <Link to="/users">Users</Link>
+                  <Link to="/player">Players</Link>
                 </li>
               </ul>
             </nav>
@@ -42,8 +43,8 @@ function App() {
             <Route path="/country">
               <Countrys />
               </Route>
-            <Route path="/wines">
-              {/* <Wine /> */}
+            <Route path="/player">
+              <Player />
               </Route>
           </Switch>
         </div>
